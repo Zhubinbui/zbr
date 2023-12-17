@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    /**
+     *  Promise ---- 解决回调地狱
+     *  Promise ----三种状态
+     *  pedding   --- 等待
+     *  resolve   --- 成功
+     *  rejected  --- 失败
+     *
+     *  成功函数 失败的函数
+     *  new Promise((resolve,reject) => {}) --- 基本语法
+     *    ----默认的结果值 und
+     *
+     *  -------Promise不受外界影响,受结果影响：代码报错。
+     *  -------Promise的状态 一旦发生改变，就无法再修改。 不可逆！！！
+     *  -------Promise任何时候都可以得到这个改变后结果
+     *
+     *  接收成功后的回调  接收失败后的回调
+     *  then(()=>{},()=>{})
+     *  捕获失败后的回调
+     *  catch(()=>{})
+     *  无论结果如何 Promise一定会执行一次
+     *  finally()
+     *  接收所有的Promise对象返回的结果值。
+     *  但凡全部的结果为成功，则返回成功;其中一个是失败，则返回最先失败的结果
+     *  all()
+     *  接受第一个返回的结果值！！！
+     *  race()
+     *
+     */
+
+    // const p1 = new Promise((res) => {
+    //   setTimeout(function () {
+    //     res(123);
+    //   });
+    // });
+    // const p2 = new Promise((res, rej) => {
+    //   setTimeout(function () {
+    //     rej(456);
+    //   });
+    // });
+    // const p3 = new Promise((res, rej) => {
+    //   rej(789);
+    // });
+
+    // const p4 = Promise.race([p1, p2, p3]);
+    // console.log(p4); // 三个pro对象  []  {一个等待状态的pro对象}
+
+    // new Promise((res, rej) => {
+    //   rej(123);
+    // })
+    //   .finally((res) => {
+    //     console.log(res); // und
+    //   })
+    //   .catch((res) => console.log(res)); // 123
+
+    //   .then(() => {
+    //     console.log(11);
+    //   })
+    //   .then(
+    //     (res) => {
+    //       console.log(res);
+    //     },
+    //     (res) => {
+    //       console.log(res);
+    //     }
+    //   );
+
+    // console.log(123);
+
+    // function a(abc) {
+    //   console.log;
+    // }
+    // a(459);
+
+    // const P = new Promise((res, rej) => {
+    //   res(123);
+    // })
+    //   .then((res) => {
+    //     return res + 456;
+    //   })
+    //   .then((res) => {
+    //     console.log(res + 456);
+    //     return res;
+    //   })
+    //   .then((res) => console.log(res));
+
+    // const pro = new Promise((resolve, reject) => {
+    //   // resolve(123); // 使状态变成失败 且代码运行报错 报错结果值
+    //   console.log(123);
+    //   resolve(111);
+    //   reject(222);
+    // });
+    // const p = new Promise((res, rej) => {
+    //   rej(456);
+    //   console.log(123);
+    //   console.log(pro);
+    // });
+    // console.log(p);
+    // console.log(abc);
+    // console.log([, , , ,]); // 空属性
+
+    // console.log(pro);
+
+    // console.log(new Error("789"));
+    // console.log(abc);
+    // function a() {
+    //   console.log(123);
+    //   console.log(456);
+    //   return function () {
+    //     console.log(123);
+    //     console.log(456);
+    //     return function () {};
+    //   };
+    // }
+
+    // a()()();
+  </script>
+</html>
